@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
+import { TodoReducer } from "./todos";
 
-import todos from "./todos";
+export * from "./todos";
 
 export default combineReducers({
-  todos
+  TodoReducer
 });
