@@ -1,13 +1,14 @@
 import { combineReducers } from 'redux';
 import { TodoHandlers } from './Todos';
 
-export default combineReducers({
+/**
+ * Combine all reducers from Ducks and export as a single reducer
+ */
+export const DuckReducer = combineReducers({
   Todos: TodoHandlers.Reducers
 });
 
-export * from 'src/core/store/interfaces';
-
 /**
- * All stored models
+ * All handlers
  */
 export * from './Todos';

@@ -1,9 +1,18 @@
 import { createStore } from 'redux';
-import reducers, { Todo } from './ducks';
+import { DuckReducer } from './ducks';
+import { StoreType, ActionType } from './models';
 
-export interface StoreType {
-  Todos: Todo[];
-}
+/**
+ * Export the Store object containing all state data
+ */
+export const Store = createStore<StoreType, ActionType, any, any>(DuckReducer);
 
+/**
+ * Export all Ducks from application
+ */
 export * from './ducks';
-export default createStore(reducers);
+
+/**
+ * Export all Models from application
+ */
+export * from './models';

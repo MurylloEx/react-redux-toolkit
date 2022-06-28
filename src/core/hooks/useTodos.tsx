@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { useDispatch, useSelector } from 'react-redux';
-import { Todo } from 'src/core/store/interfaces';
-import { TodoHandlers, StoreType, TodoActions } from 'src/core/store';
+import { Todo, StoreType } from 'src/core/store';
+import { TodoHandlers, TodoActions } from 'src/core/store';
 
 export type UseTodosType = [Todo[], TodoActions];
 

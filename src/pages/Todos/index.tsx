@@ -3,8 +3,7 @@ import { useTodos } from 'src/core/hooks';
 
 export interface TodosPageProps { }
 
-const TodosPage: FunctionComponent<TodosPageProps> = () => {
-
+export const TodosPage: FunctionComponent<TodosPageProps> = () => {
   const inputRef = createRef<HTMLInputElement>();
   const [todos, action] = useTodos();
 
@@ -37,5 +36,3 @@ const TodosPage: FunctionComponent<TodosPageProps> = () => {
     </section>
   );
 }
-
-export const Todos = TodosPage;

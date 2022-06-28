@@ -1,10 +1,13 @@
-import { ActionType, Todo } from 'src/core/store/interfaces';
+import { ActionType, Todo } from 'src/core/store/models';
+
+/**
+ * Initial value of entity state
+ */
+const INITIAL_STATE: Todo[] = [];
 
 /**
  * Handlers / Reducers
  */
-const INITIAL_STATE: Todo[] = [];
-
 function CreateTodo(state: Todo[], action: ActionType<string, string>) {
   return [
     ...state,
@@ -49,9 +52,9 @@ const RemoveTodoAction = (id: number) =>
   ({ type: 'REMOVE_TODO', payload: id });
 
 export type TodoActions = {
-  create: (text: string) => ActionType<string, string>;
-  toggle: (id: number) => ActionType<string, number>;
-  remove: (id: number) => ActionType<string, number>;
+  create(text: string): ActionType<string, string>;
+  toggle(id: number): ActionType<string, number>;
+  remove(id: number): ActionType<string, number>;
 }
 
 const Actions: TodoActions = {
