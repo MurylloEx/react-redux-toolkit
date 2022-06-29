@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
-import { TodoHandlers } from './Todos';
+import { TodoDuck } from './todos';
 
 /**
  * Combine all reducers from Ducks and export as a single reducer
  */
 export const DuckReducer = combineReducers({
-  Todos: TodoHandlers.Reducers
+  Todos: TodoDuck.Reducers
 });
 
 /**
- * All handlers
+ * Export all ducks
  */
-export * from './Todos';
+export * from './todos';
