@@ -1,4 +1,4 @@
-import { ActionType, Todo } from 'src/core/store/models';
+import { TodoActions } from 'src/core/store/ducks/todos';
 
 /**
  * Action Creators
@@ -11,15 +11,6 @@ const ToggleTodoAction = (id: number) =>
 
 const RemoveTodoAction = (id: number) => 
   ({ type: 'REMOVE_TODO', payload: id });
-
-/**
- * Define what exported actions can be used in App
- */
-export type TodoActions = {
-  create(text: string): ActionType<string, string>;
-  toggle(id: number): ActionType<string, number>;
-  remove(id: number): ActionType<string, number>;
-}
 
 /**
  * Export usable "Todo" actions
