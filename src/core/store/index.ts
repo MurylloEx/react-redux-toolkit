@@ -1,16 +1,19 @@
-import { createStore } from 'redux';
-import { DuckReducer } from './ducks';
-import { StoreType, ActionType } from './models';
+import { configureStore } from '@reduxjs/toolkit';
+import { TodoSlice } from './slices';
 
 /**
  * Export the Store object containing all state data
  */
-export const Store = createStore<StoreType, ActionType, any, any>(DuckReducer);
+export const Store = configureStore({
+  reducer: {
+    Todos: TodoSlice.Reducers
+  },
+});
 
 /**
- * Export all Ducks from application
+ * Export all slices from application
  */
-export * from './ducks';
+export * from './slices';
 
 /**
  * Export all Models from application

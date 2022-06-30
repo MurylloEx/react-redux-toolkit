@@ -1,5 +1,5 @@
 {
-  "name": "react-duck-pattern",
+  "name": "react-redux-toolkit",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.tsx",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.16.7",
+    "@reduxjs/toolkit": "^1.8.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^7.2.6",
